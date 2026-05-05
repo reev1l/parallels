@@ -1,0 +1,5 @@
+/home/l.bazdyrev/Parallels-1/task2/task2_3/build/CMakeFiles/lab2_var1.dir
+/home/l.bazdyrev/Parallels-1/task2/task2_3/build/CMakeFiles/lab2_var2.dir
+/home/l.bazdyrev/Parallels-1/task2/task2_3/build/CMakeFiles/schedule.dir
+/home/l.bazdyrev/Parallels-1/task2/task2_3/build/CMakeFiles/edit_cache.dir
+/home/l.bazdyrev/Parallels-1/task2/task2_3/build/CMakeFiles/rebuild_cache.dir
