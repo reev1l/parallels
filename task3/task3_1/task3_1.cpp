@@ -10,12 +10,12 @@ int N_VAL = 40000;
 
 void parallel_initialize(std::vector<double> &A, std::vector<double> &b, int n, int threads)
 {
-    std::vector<std::jthread> workers; // контейнер для потоков
+    std::vector<std::jthread> workers;
     for(int t = 0; t < threads; t++)
     {
         workers.emplace_back([&, t]()
         {
-            int chunk = n / threads; // делим строки матрицы между потоками
+            int chunk = n / threads;
             int lb = t * chunk;
             int ub = (t == threads - 1) ? n : lb + chunk;
             
@@ -23,9 +23,9 @@ void parallel_initialize(std::vector<double> &A, std::vector<double> &b, int n, 
             {
                 for (int j = 0; j < n; j++)
                 {
-                    A[i * n + j] = static_cast<double>(i + j); // запись в разные строки A
+                    A[i * n + j] = static_cast<double>(i + j);
                 }
-                b[i] = static_cast<double>(i); // параллельно запись в вектор b 
+                b[i] = static_cast<double>(i);
             }
         });
     }
